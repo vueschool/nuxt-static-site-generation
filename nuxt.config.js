@@ -3,7 +3,15 @@ const pkg = require('./package')
 module.exports = {
   mode: 'universal',
 
-  generate: {},
+  generate: {
+    routes () {
+      let postRoutes = []
+      for (let i=1; i<=100; i++) {
+        postRoutes.push(`posts/${i}`)
+      }
+      return postRoutes
+    }
+  },
 
   /*
   ** Headers of the page
