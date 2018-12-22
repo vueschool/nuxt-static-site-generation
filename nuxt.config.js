@@ -1,15 +1,12 @@
 const pkg = require('./package')
-
+import axios from 'axios'
 module.exports = {
   mode: 'universal',
 
   generate: {
-    routes () {
-      let postRoutes = []
-      for (let i=1; i<=100; i++) {
-        postRoutes.push(`posts/${i}`)
-      }
-      return postRoutes
+    async routes () {
+      let response = await axios.get('https://jsonplaceholder.typicode.com/posts')
+      return response.data.map(post => `posts/${post.id}`)
     }
   },
 
