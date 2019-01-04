@@ -6,7 +6,10 @@ module.exports = {
   generate: {
     async routes () {
       let response = await axios.get('https://jsonplaceholder.typicode.com/posts')
-      return response.data.map(post => `posts/${post.id}`)
+      return response.data.map(post => ({
+        route: `posts/${post.id}`,
+        payload: post
+      }))
     }
   },
 

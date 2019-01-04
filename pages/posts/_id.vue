@@ -25,8 +25,15 @@
         id: this.$route.params.id
       }
     },
-    async asyncData ({params, $axios}) {
-      let post = await $axios.$get(`posts/${params.id}`)
+    async asyncData ({params, $axios, payload}) {
+      let post
+      if (payload) {
+        post = payload
+        console.log('getting post', post.id, 'from payload')
+      } else {
+        post = await $axios.$get(`posts/${params.id}`)
+        console.log('hitting the API for the post', post.id)
+      }
       return {post}
     }
   }
