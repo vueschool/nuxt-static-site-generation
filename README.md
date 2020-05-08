@@ -18,7 +18,7 @@ After this course, you'll be familiar with:
 
 Prerendering is not the same as server-side rendering. If you want to learn about server-side rendering and Nuxt, check out our [Async Data with Nuxt.js](https://vueschool.io/courses/async-data-with-nuxtjs) course. If you do not have experience with Nuxt.js yet, we recommend our [Nuxt.js Fundamentals](https://vueschool.io/courses/nuxtjs-fundamentals) course.
 
-This course is made **together** with the **Chopin brothers** (founders of [Nuxt.js](https://nuxtjs.org/)) and core member **Alexander Lichter**.
+This course is made **together** with Nuxt.js core member **Alexander Lichter**.
 
 [Click here to watch the course](https://vueschool.io/courses/static-site-generation-with-nuxtjs)
 
